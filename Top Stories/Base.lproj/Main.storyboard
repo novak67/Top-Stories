@@ -38,6 +38,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="7r2-Iz-jW9" kind="show" id="M8f-Tf-ua0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,7 +48,13 @@
                             <outlet property="delegate" destination="i3V-lV-C9E" id="KMS-ZF-uBf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bvk-9Y-PSW"/>
+                    <navigationItem key="navigationItem" id="bvk-9Y-PSW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PtE-SB-Eo0">
+                            <connections>
+                                <action selector="onTappedDoneButton:" destination="i3V-lV-C9E" id="hI9-Sn-lGl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLv-nA-GkH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,6 +77,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GkZ-HZ-Z7u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="69.565217391304358" y="106.47321428571428"/>
+        </scene>
+        <!--Articles View Controller-->
+        <scene sceneID="uhz-HD-fNg">
+            <objects>
+                <tableViewController id="7r2-Iz-jW9" customClass="ArticlesViewController" customModule="Top_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v4P-sF-1vq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="lq5-86-Y3N" detailTextLabel="Rg8-rc-Jzq" style="IBUITableViewCellStyleSubtitle" id="ntD-sC-cMg">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ntD-sC-cMg" id="9LG-K5-QqN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lq5-86-Y3N">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rg8-rc-Jzq">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7r2-Iz-jW9" id="AFH-DL-6KG"/>
+                            <outlet property="delegate" destination="7r2-Iz-jW9" id="UiN-hf-qpS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Zng-Ax-Naw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4g-Tf-s9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="106"/>
         </scene>
     </scenes>
 </document>
